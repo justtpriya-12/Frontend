@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+.container {
+  display: flex;
+
+ /*define how items are placed */
+  /* flex-direction: column-reverse;  */
+
+/* Controls whether items stay in one line or wrap. */
+  /* flex-wrap: wrap-reverse; */
+
+/* Shorthand for flex-direction + flex-wrap. */
+  /* flex-flow: row wrap; */
+
+/* Aligns items horizontally along the main axis. */
+  /* justify-content: center; */
+
+/* Aligns items vertically along the cross axis.  */
+  /* align-items: baseline; */
+
+/* Aligns rows of items when there is extra space in the cross axis. */
+  /* flex-wrap: wrap;
+  align-content: space-around; */
+
+/* Adds spacing between items (no need for margins).  horizontal + vertical gap  */
+  /* gap: 20px;    */
+
+
+
+/* Makes an item grow to fill available space. Default = 0 (do not grow). */
+  /* .item:nth-child(1) {
+  flex-grow: 1;
+} */
+
+/* Aligns a specific item vertically along the cross axis, overriding align-items. */
+  align-items: center;
+
+  border: 2px solid #333;
+  margin: 20px;
+  height: 200px; /* useful for vertical alignment demos */
+}
+
+/* Aligns a specific item vertically along the cross axis, overriding align-items. */
+.item:nth-child(2) {
+  align-self: flex-start;
+}
+
+
+/* Controls the order of items. Default = 0 (normal order). */
+/* .item:nth-child(2) {
+  order: 3;
+}
+.item:nth-child(3) {
+  order: 1;
+} */
+
+
+/* Makes an item grow to fill available space. Default = 0 (do not grow). */
+/* .item:nth-child(1) {
+  flex-grow: 1;
+} */
+
+/* Makes an item shrink if necessary. Default = 1 (shrink if needed). */
+/* .item:nth-child(2) {
+  flex-shrink: 2; 
+} */
+
+/* Sets the initial size of an item before any growing or shrinking. Default = auto. */
+/* .item:nth-child(2) {
+  flex-basis: 300px;
+} */
+
+
+/* Shorthand for flex-grow | flex-shrink | flex-basis */
+/* .item:nth-child(2) {
+  flex: 1 1 200px; 
+} */
+
+.item {
+    width: 200px;
+  background: lightblue;
+  border: 1px solid #333;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+    </style>
+
+</head>
+<body>
+    <div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div>
+
+
+</body>
+</html>
