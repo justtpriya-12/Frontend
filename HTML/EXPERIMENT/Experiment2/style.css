@@ -1,0 +1,367 @@
+:root {
+  --ink: #1e293b; /* primary text */
+  --muted: #64748b; /* secondary text */
+  --bg: #f6f7fb; /* page bg */
+  --card: #ffffff; /* card bg */
+  --line: #e8ebf2; /* separators */
+  --brand: #2b6cb0; /* royal blue */
+  --accent: #8b5cf6; /* soft violet */
+  --gold: #c9a227; /* luxery accent */
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  margin: 0 0 0.6rem;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+#about-header {
+  position: relative;
+  padding: 96px 24px 120px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to bottom, #0f172a, #496ac5, #8b84d6);
+  overflow: hidden;
+}
+
+#about-header::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 48px;
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  border-radius: 999px;
+}
+
+#about-header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.2px;
+}
+
+#about-header p {
+  max-width: 780px;
+  margin: 0.75rem auto 0;
+  color: #e6e8ff;
+  opacity: 0.95;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto 64px;
+  padding: 0 24px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  border: 1px solid var(--line);
+  padding: 32px 28px;
+}
+
+.section {
+  margin: 28px 0 40px;
+}
+
+.section-title {
+  display: inline-block;
+  font-size: 1.4rem;
+  color: var(--ink);
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56%;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  opacity: 0.15;
+}
+
+.lead::first-letter {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  line-height: 1;
+  float: left;
+  margin: 0.1rem 0.5rem 0 0;
+  color: var(--brand);
+}
+
+a[target="_blank"] {
+  color: var(--brand);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(43, 108, 176, 0.3);
+}
+
+/* External link arrow via pseudo-element */
+a[target="_blank"]::after {
+  content: " ↗";
+  font-weight: 600;
+}
+a[target="_blank"]:hover {
+  color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+ul.values {
+  padding-left: 1.2rem;
+  margin: 0.6rem 0 0;
+}
+ul.values li {
+  margin: 0.1rem 0 0.35rem;
+}
+ul.values li::marker {
+  color: var(--accent);
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin-top: 14px;
+}
+
+.member {
+  position: relative;
+  padding: 26px 22px 22px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff, #fbfbfe);
+  border: 1px solid var(--line);
+}
+/* Decorative corner ribbon (pseudo-element) */
+.member::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 24px solid transparent;
+  border-bottom: 24px solid transparent;
+  border-top: 24px solid rgba(139, 92, 246, 0.18);
+  border-right: 24px solid rgba(139, 92, 246, 0.18);
+  border-top-right-radius: 14px;
+}
+
+/* Role badge via attribute selector + pseudo-element */
+.member[data-role="ceo"]::after {
+  content: " CEO ";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 0.72rem;
+  letter-spacing: 0.4px;
+  background: linear-gradient(90deg, var(--gold), #f5e6a8);
+  color: #2a2a2a;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.member:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+  border-color: #dfe6fb;
+}
+.member img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+  border: 3px solid #eaf0ff;
+  margin-bottom: 10px;
+}
+
+.member h3 {
+  margin: 0.25rem 0 0.25rem;
+}
+.member small {
+  color: var(--muted);
+}
+
+/* Subtle alternation (pseudo-class) */
+.member:nth-child(odd) {
+  background: linear-gradient(180deg, #ffffff, #fefeff);
+}
+
+/* ---------- Quote ---------- */
+blockquote {
+  position: relative;
+  margin: 0;
+  background: #f4f7ff;
+  border: 1px dashed #d7dfff;
+  padding: 22px 24px 24px;
+  border-radius: 14px;
+  color: #334155;
+}
+
+/* Quote mark (pseudo-element) */
+blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -22px;
+  left: 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: #94a3b8;
+  opacity: 0.35;
+}
+
+/* ---------- CTA ---------- */
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  border: 1px solid var(--line);
+  padding: 22px;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.cta .btn {
+  --_bg: linear-gradient(90deg, var(--brand), var(--accent));
+  padding: 12px 18px;
+  border-radius: 999px;
+  color: white;
+  background: var(--_bg);
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 8px 18px rgba(43, 108, 176, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cta .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(43, 108, 176, 0.3);
+}
+.cta .btn:focus-visible {
+  outline: 3px solid #c7d2fe;
+  outline-offset: 2px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 26px;
+  text-align: center;
+  color: #6b7280;
+}
+
+/* ---------- Movie List with Highlighted Favorite ---------- */
+.movie-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.movie-list li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  position: relative; /* Needed for positioning the star */
+}
+
+/* Highlighted favorite movie */
+.movie-list li.favorite {
+  font-weight: bold;
+  color: #d97706; /* warm amber/gold */
+  background-color: #fffbea;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #fbbf24; /* Optional accent */
+  position: relative;
+}
+
+/* Add gold star before favorite movie */
+.movie-list li.favorite::before {
+  content: "★";
+  color: #c9a227; /* Gold star */
+  font-size: 1rem;
+  position: absolute;
+  left: -1.2rem;
+  top: 0.1rem;
+}
+
+
+.city-list {
+  counter-reset: city-counter;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.city-list li {
+  position: relative;
+  margin-bottom: 0.75rem;
+  padding: 0.6rem 0.8rem 0.6rem 2.6rem;
+  background-color: #f9fafb;
+  border-left: 4px solid transparent;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+/* Custom "random" color markers per item using nth-child */
+.city-list li:nth-child(1) {
+  border-left-color: #ef4444; /* red */
+}
+.city-list li:nth-child(2) {
+  border-left-color: #3b82f6; /* blue */
+}
+.city-list li:nth-child(3) {
+  border-left-color: #10b981; /* green */
+}
+.city-list li:nth-child(4) {
+  border-left-color: #f59e0b; /* amber */
+}
+.city-list li:nth-child(5) {
+  border-left-color: #8b5cf6; /* violet */
+}
+.city-list li:nth-child(6) {
+  border-left-color: #ec4899; /* pink */
+}
+.city-list li:nth-child(7) {
+  border-left-color: #14b8a6; /* teal */
+}
+.city-list li:nth-child(8) {
+  border-left-color: #6366f1; /* indigo */
+}
+
+/* Optional: Add number badge before each city */
+.city-list li::before {
+  counter-increment: city-counter;
+  content: counter(city-counter) ".";
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  color: var(--muted);
+}
+
