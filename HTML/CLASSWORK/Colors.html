@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Color Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+    .box {
+      padding: 16px;
+      margin: 10px 0;
+      color: rgb(16, 13, 13);
+      border-radius: 4px;
+    }
+
+/* Solid colors */
+.button        { background: #1e90ff; }               /* HEX */
+.alert         { background: rgb(255, 69, 0); }       /* RGB */
+.tag           { background: hsl(140 70% 40%); }      /* HSL */
+
+/* Semi-transparent overlays */
+.overlay       { background: rgb(0 0 0 / 0.4); }      /* 40% black */
+.tint-red      { background: #ff000080; }             /* 50% red */
+.glass         { background: hsl(0 0% 100% / 0.25); } /* 25% white */
+
+/* Using HSL to make variants easily */
+.primary       { background: hsl(220 90% 56%); }      /* base */
+.primary-hover { background: hsl(220 90% 50%); }      /* darker */
+.primary-weak  { background: hsl(220 90% 95%); }      /* pale tint */
+
+
+  </style>
+</head>
+<body>
+
+  <div class="box button">Button (HEX)</div>
+  <div class="box alert">Alert (RGB)</div>
+  <div class="box tag">Tag (HSL)</div>
+
+  <div class="box overlay">Overlay (40% black)</div>
+  <div class="box tint-red">Tint Red (50% red)</div>
+  <div class="box glass">Glass Effect (25% white)</div>
+
+  <div class="box primary">Primary</div>
+  <div class="box primary-hover">Primary Hover</div>
+  <div class="box primary-weak">Primary Weak</div>
+
+</body>
+</html>
