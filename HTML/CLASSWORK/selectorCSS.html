@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        input[type] {
+            border: 2px solid green; /* applies only to inputs WITH type attribute */
+        }
+
+        a[href="https://google.com"] {
+            color:red;
+        }
+
+        p[class~="highlight"] {
+            background: yellow;
+        }
+
+        p[lang|="en"] {
+            color: blue;
+        }
+
+        a[href^="https://example.com"] {
+            font-weight: bold;
+        }
+
+        img[src$=".png"] {
+            border: 2px solid blue;
+        }
+
+        a[href*="contact"] {
+            color: green;
+        }
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="Enter name">
+        <input type="password" placeholder="Enter password">
+        <input placeholder="No type attribute!">
+    </div>
+    <div>
+        <a href="https://google.com">Google</a>
+        <a href="https://github.com">GitHub</a>
+    </div>
+    <div>
+        <p class="card highlight">Card</p>
+        <p class="card">Normal</p>
+    </div>
+    <div>
+        <p lang="en">Hello</p>
+        <p lang="en-US">Howdy</p>
+        <p lang="fr">Bonjour</p>
+    </div>
+    <div>
+        <a href="https://example.com/page">Page</a>
+        <a href="https://example.org/home">Home</a>
+        <a href="http://oldsite.com">Old</a>
+    </div>
+    <div>
+        <img src="image.png">
+        <img src="photo.jpg">
+        <img src="icon.svg">
+    </div>
+    <div>
+        <a href="https://example.com/help">Help</a>
+        <a href="https://example.com/contact">Contact</a>
+        <a href="https://example.com/profile">Profile</a>
+    </div>
+
+
+
+
+</body>
+</html>
