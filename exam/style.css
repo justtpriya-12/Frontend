@@ -1,0 +1,77 @@
+/* Page Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e6f0ff; /* light blue background */
+    color: #000;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+/* Container */
+.container {
+    width: 60%;
+    background-color: #ffffff; /* white card */
+    padding: 25px 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #0056b3; /* dark blue */
+}
+
+/* Question Box */
+.question-box {
+    background-color: #f0f5ff; /* light blue card */
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* Options */
+.option {
+    background-color: #cce0ff; /* blue option */
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.correct {
+    background-color: #4caf50; /* green for correct */
+    color: #fff;
+}
+
+.wrong {
+    background-color: #ff3b3b; /* red for wrong */
+    color: #fff;
+}
+
+/* Button */
+#submitBtn {
+    width: 100%;
+    padding: 12px;
+    background-color: #0056b3; /* dark blue */
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Result */
+#result {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #0056b3; /* dark blue */
+}
+
